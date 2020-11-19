@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todo-app
+  name: todo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-app
+  template:
+    metadata:
+      labels:
+        app: todo-app
+    spec:
+      volumes: # Define volume
+        - name: shared-todo-image
+          persistentVolumeClaim:
+            claimName: todo-app-claim
+      containers:
+        - image: aldahdouh/todo:latest
+          imagePullPolicy: Always
+          name: todo
+          volumeMounts: # Mount volume
+          - name: shared-todo-image
+            mountPath: /app/images

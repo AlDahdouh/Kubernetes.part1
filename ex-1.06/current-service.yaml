@@ -1,0 +1,107 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-11-13T13:01:08Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:component: {}
+            f:provider: {}
+        f:spec:
+          f:clusterIP: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: k3s
+      operation: Update
+      time: "2020-11-13T13:01:08Z"
+    name: kubernetes
+    namespace: default
+    resourceVersion: "152"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: e1e9893d-135f-4765-8f2a-30bbac056c80
+  spec:
+    clusterIP: 10.43.0.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"todo-app-srv","namespace":"default"},"spec":{"ports":[{"name":"http","nodePort":30000,"port":1234,"protocol":"TCP","targetPort":3000}],"selector":{"app":"todo-app"},"type":"NodePort"}}
+    creationTimestamp: "2020-11-13T14:01:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          f:externalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":1234,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:nodePort: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:app: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-13T14:01:27Z"
+    name: todo-app-srv
+    namespace: default
+    resourceVersion: "3875"
+    selfLink: /api/v1/namespaces/default/services/todo-app-srv
+    uid: e5134c75-d901-44d4-8c3e-41e35c6c1c60
+  spec:
+    clusterIP: 10.43.230.140
+    externalTrafficPolicy: Cluster
+    ports:
+    - name: http
+      nodePort: 30000
+      port: 1234
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: todo-app
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

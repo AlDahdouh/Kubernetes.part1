@@ -1,0 +1,6 @@
+kubectl apply -f manifests/deployment.yaml 
+kubectl get pods
+kubectl get deployments
+
+
+kubectl logs --follow main-app-554454bdd7-rjh42 --all-containers=true

@@ -1,0 +1,14 @@
+docker build -t random_string_app .
+docker run -it random_string_app
+docker tag random_string_app aldahdouh/random_string_app 
+docker login
+docker push aldahdouh/random_string_app
+
+
+
+kubectl create deployment main-app --image=aldahdouh/random_string_app
+
+
+kubectl get pods
+kubectl get deployments
+kubectl logs -f main-app-8584d46dcc-2j25f

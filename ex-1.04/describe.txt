@@ -1,0 +1,139 @@
+Name:         todo-app-7d4d8cd644-782tp
+Namespace:    default
+Priority:     0
+Node:         k3d-k3s-default-agent-0/172.29.0.3
+Start Time:   Tue, 10 Nov 2020 23:05:04 +0200
+Labels:       app=todo-app
+              pod-template-hash=7d4d8cd644
+Annotations:  <none>
+Status:       Running
+IP:           10.42.1.5
+IPs:
+  IP:           10.42.1.5
+Controlled By:  ReplicaSet/todo-app-7d4d8cd644
+Containers:
+  todo:
+    Container ID:   containerd://44b49691a388a7de62553b4cc2392a03829147382facfb04fc537b6f2b498b11
+    Image:          aldahdouh/todo
+    Image ID:       docker.io/aldahdouh/todo@sha256:14dab7b924c0728dd7d7aeb88d0b56af75fafaa8b0300de57a69746321be0d2f
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Tue, 10 Nov 2020 23:05:35 +0200
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ps4dj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ps4dj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ps4dj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          <none>
+
+
+Name:         main-app-554454bdd7-rjh42
+Namespace:    default
+Priority:     0
+Node:         k3d-k3s-default-server-0/172.29.0.2
+Start Time:   Wed, 11 Nov 2020 13:16:45 +0200
+Labels:       app=main-app
+              pod-template-hash=554454bdd7
+Annotations:  <none>
+Status:       Running
+IP:           10.42.0.12
+IPs:
+  IP:           10.42.0.12
+Controlled By:  ReplicaSet/main-app-554454bdd7
+Containers:
+  random-string-app-62jcj:
+    Container ID:   containerd://908ce297b0d213298b361f547f1515e5a377a86f105f0d779cd833386e4d846d
+    Image:          aldahdouh/random_string_app
+    Image ID:       docker.io/aldahdouh/random_string_app@sha256:d37d7883da47e909adec7b56741ee26f4848be2d81acfa6ebb05afbce0f0f36d
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Wed, 11 Nov 2020 13:16:46 +0200
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ps4dj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ps4dj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ps4dj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          <none>
+
+
+Name:         main-app-554454bdd7-kxk8l
+Namespace:    default
+Priority:     0
+Node:         k3d-k3s-default-agent-0/172.29.0.3
+Start Time:   Wed, 11 Nov 2020 14:49:47 +0200
+Labels:       app=main-app
+              pod-template-hash=554454bdd7
+Annotations:  <none>
+Status:       Running
+IP:           10.42.1.10
+IPs:
+  IP:           10.42.1.10
+Controlled By:  ReplicaSet/main-app-554454bdd7
+Containers:
+  random-string-app-62jcj:
+    Container ID:   containerd://29169d7c6d32496e31e5ac695a0890244e9665fc95819ce2f2238e989a6d88a0
+    Image:          aldahdouh/random_string_app
+    Image ID:       docker.io/aldahdouh/random_string_app@sha256:d37d7883da47e909adec7b56741ee26f4848be2d81acfa6ebb05afbce0f0f36d
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Wed, 11 Nov 2020 14:49:48 +0200
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ps4dj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-ps4dj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ps4dj
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  3m18s  default-scheduler  Successfully assigned default/main-app-554454bdd7-kxk8l to k3d-k3s-default-agent-0
+  Normal  Pulled     3m17s  kubelet            Container image "aldahdouh/random_string_app" already present on machine
+  Normal  Created    3m17s  kubelet            Created container random-string-app-62jcj
+  Normal  Started    3m17s  kubelet            Started container random-string-app-62jcj
